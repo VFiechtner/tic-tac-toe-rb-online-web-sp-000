@@ -40,6 +40,10 @@ def turn(board)
   if valid_move?(board, index)
     token = current_Player(board)
     move(board, index, token)
+    display_board(board)
+  else
+    puts "That's not a valid move"
+    turn(board)  
   end
 end
 
